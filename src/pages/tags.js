@@ -16,13 +16,15 @@ const TagsPage = ({
   <Layout title={title}>
     <h1>Tags</h1>
     <ul>
-      {group.map((tag) => (
-        <li key={tag.fieldValue}>
-          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-            {tag.fieldValue} ({tag.totalCount})
-          </Link>
-        </li>
-      ))}
+      {group
+        .sort((a, b) => b.totalCount - a.totalCount)
+        .map((tag) => (
+          <li key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          </li>
+        ))}
     </ul>
   </Layout>
 );
