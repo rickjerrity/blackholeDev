@@ -1,0 +1,45 @@
+{
+  "name": "blackhole-dev",
+  "private": true,
+  "description": "blackhole.dev Gatsby site",
+  "version": "1.0.0",
+  "author": "rickjerrity",
+  "dependencies": {
+    "gatsby": "^2.21.21",
+    "gatsby-image": "^2.4.3",
+    "gatsby-plugin-manifest": "^2.4.2",
+    "gatsby-plugin-offline": "^3.2.1",
+    "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-sharp": "^2.6.2",
+    "gatsby-remark-copy-linked-files": "^2.3.2",
+    "gatsby-remark-images": "^3.3.2",
+    "gatsby-source-filesystem": "^2.3.1",
+    "gatsby-transformer-remark": "^2.8.7",
+    "gatsby-transformer-sharp": "^2.5.2",
+    "lodash.kebabcase": "^4.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.0.0",
+    "react-icons": "^3.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "eslint --ignore-path .gitignore .",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.{js,jsx,json}\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm-run-all --parallel check-format lint build",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}
