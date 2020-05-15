@@ -34,7 +34,16 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-images`, `gatsby-remark-copy-linked-files`],
+        plugins: [
+          `gatsby-remark-images`,
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `80`,
+            },
+          },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,

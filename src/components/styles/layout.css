@@ -16,6 +16,10 @@ body {
   background-color: var(--primaryColor-lightTheme);
 }
 
+.anchor.before svg {
+  fill: var(--primaryColor);
+}
+
 a {
   color: var(--primaryColor);
   text-decoration: none;
@@ -25,7 +29,8 @@ a:hover {
   border-bottom: 1px solid var(--primaryColor);
 }
 
-.plainLink, .plainLink:hover {
+.plainLink,
+.plainLink:hover {
   border-bottom: none;
   text-decoration: none;
 }
