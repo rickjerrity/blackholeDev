@@ -69,6 +69,17 @@ footer {
   justify-content: center;
 }
 
+@media only screen and (max-width: 950px) {
+  .flexContainer {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  header {
+    justify-content: initial;
+  }
+}
+
 .content {
   margin-top: 80px;
   max-width: 960px;

@@ -1,7 +1,7 @@
 ---
 title: 'Hello World'
 date: '2020-05-15'
-tags: [ 'Gatsby', 'Netlify', 'Twitch', 'Mixer', 'YouTube', 'StreamE', 'blackhole.dev', 'Airtable', 'TestingJavascript.com' ]
+tags: [ 'blackhole.dev', 'Gatsby', 'StreamE', 'Twitch', 'Mixer', 'YouTube', 'Airtable', 'TestingJavascript.com', 'NodeCG', 'Soundtrack' ]
 featuredImage: '../images/hello-world.gif'
 ---
 
