@@ -1,6 +1,6 @@
 # Blackhole Dev
 
-This is the [Gatsby](https://www.gatsbyjs.org/) project for the [blackhole.dev](https://blackhole.dev) blog.
+This is the [Gatsby](https://www.gatsbyjs.org/) repo for the [blackhole.dev](https://blackhole.dev) blog.
 
 ## Requirements
 
@@ -8,15 +8,21 @@ This is the [Gatsby](https://www.gatsbyjs.org/) project for the [blackhole.dev](
 
 ## Installation
 
-Clone the repo, then run the following command from the root directory of the project:
+Clone the repo, then run the following command from the root directory of the repo:
 
 ```
 npm install
 ```
 
+## Developing
+
+```
+npm start
+```
+
 ## Building
 
-Run the following command from the root directory of the project:
+Run the following command from the root directory of the repo:
 
 ```
 npm run build
@@ -24,7 +30,7 @@ npm run build
 
 ## Serving
 
-Run the following command from the root directory of the project:
+Run the following command from the root directory of the repo:
 
 ```
 npm run serve
