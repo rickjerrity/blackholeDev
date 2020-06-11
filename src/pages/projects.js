@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from 'components/Layout';
 
@@ -18,14 +17,12 @@ export default function Projects() {
         <p>A multi-platform stream viewing service for Twitch, Mixer, and YouTube live streamers.</p>
       </div>
       <div className="centeredContent">
-        <Link to="/saltpack-verify">
-          <h2 className="linkTitle">Saltpack Verify</h2>
-        </Link>
+        <a href="https://giddyup.horse">
+          <h2 className="linkTitle">giddyup.horse</h2>
+        </a>
       </div>
       <div className="centeredContent">
-        <p>
-          This page verifies messages signed using the <a href="https://saltpack.org/">Saltpack</a> format.
-        </p>
+        <p>A GitHub Pages site editable by anyone at anytime.</p>
       </div>
     </Layout>
   );
