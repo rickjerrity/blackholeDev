@@ -1,0 +1,12 @@
+#projectsContainer {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.postSummary {
+  display: inline;
+}
+
+.post {
+  margin-bottom: 40px;
+}

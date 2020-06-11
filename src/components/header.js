@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { FaRegSun, FaRegMoon } from 'react-icons/fa';
 
-import SliderSwitch from './sliderSwitch';
+import SliderSwitch from './SliderSwitch';
 
-const Header = ({ siteTitle }) => {
+function Header({ siteTitle }) {
   return (
     <header>
       <h1>
@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => {
       </div>
     </header>
   );
-};
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string.isRequired,
