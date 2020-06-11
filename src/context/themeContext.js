@@ -37,11 +37,7 @@ function ThemeProvider({ children }) {
     }
   };
 
-  return (
-    <ThemeContext.Provider value={{ lightMode, toggleLightMode }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ lightMode, toggleLightMode }}>{children}</ThemeContext.Provider>;
 }
 
 ThemeProvider.propTypes = {
