@@ -1,0 +1,12 @@
+.content {
+  width: 95%;
+}
+
+#message {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#submit {
+  border-radius: 8px;
+}
