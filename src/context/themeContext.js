@@ -8,7 +8,7 @@ const defaultState = {
 
 const ThemeContext = React.createContext(defaultState);
 
-const ThemeProvider = ({ children }) => {
+function ThemeProvider({ children }) {
   const [lightMode, setLightMode] = useState(false);
 
   useEffect(() => {
@@ -37,12 +37,8 @@ const ThemeProvider = ({ children }) => {
     }
   };
 
-  return (
-    <ThemeContext.Provider value={{ lightMode, toggleLightMode }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-};
+  return <ThemeContext.Provider value={{ lightMode, toggleLightMode }}>{children}</ThemeContext.Provider>;
+}
 
 ThemeProvider.propTypes = {
   children: PropTypes.element.isRequired,
