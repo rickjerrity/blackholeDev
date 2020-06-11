@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import ThemeContext from '../context/themeContext';
-import Header from './header';
-import Footer from './footer';
-import SEO from './seo';
+import ThemeContext from 'context/themeContext';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import SEO from 'components/SEO';
 
-import './styles/layout.css';
+import './style.css';
 
-const Layout = ({ children, title }) => {
+function Layout({ children, title }) {
   const theme = useContext(ThemeContext);
 
   const data = useStaticQuery(
@@ -34,7 +34,7 @@ const Layout = ({ children, title }) => {
       <Footer />
     </div>
   );
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -2,14 +2,12 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/layout';
+import Layout from 'components/Layout';
 
-const Tags = ({ pageContext, data }) => {
+const PostsWithTags = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`;
+  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
 
   return (
     <Layout title={tagHeader}>
@@ -25,26 +23,19 @@ const Tags = ({ pageContext, data }) => {
           );
         })}
       </ul>
-      {/*
-        This links to a page that does not yet exist.
-        You'll come back to it!
-      */}
       <Link to="/tags">All tags</Link>
     </Layout>
   );
 };
-Tags.propTypes = {
+
+PostsWithTags.propTypes = {
   pageContext: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
 };
 
 export const pageQuery = graphql`
   query($tag: String) {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
+    allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
       totalCount
       edges {
         node {
@@ -60,4 +51,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default Tags;
+export default PostsWithTags;
