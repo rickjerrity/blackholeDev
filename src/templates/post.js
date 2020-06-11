@@ -2,10 +2,10 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/layout';
-import TagContainer from '../components/tagContainer';
+import Layout from 'components/Layout';
+import TagContainer from 'components/TagContainer';
 
-const Post = ({ data }) => {
+function Post({ data }) {
   const post = data.markdownRemark;
 
   return (
@@ -16,7 +16,8 @@ const Post = ({ data }) => {
       <TagContainer tags={post.frontmatter.tags} />
     </Layout>
   );
-};
+}
+
 Post.propTypes = {
   data: PropTypes.object.isRequired,
 };
