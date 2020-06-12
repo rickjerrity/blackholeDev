@@ -3,6 +3,17 @@ const kebabCase = require('lodash.kebabcase');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 module.exports = {
+  onCreateWebpackConfig: ({ actions }) => {
+    actions.setWebpackConfig({
+      resolve: {
+        alias: {
+          context: path.resolve(__dirname, 'src', 'context'),
+          components: path.resolve(__dirname, 'src', 'components'),
+          styles: path.resolve(__dirname, 'src', 'styles'),
+        },
+      },
+    });
+  },
   onCreateNode: ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
 
@@ -42,7 +53,7 @@ module.exports = {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: path.resolve(`./src/templates/post.js`),
+        component: path.resolve(`./src/templates/Post.js`),
         context: {
           slug: node.fields.slug,
         },
@@ -52,7 +63,7 @@ module.exports = {
     result.data.allMarkdownRemark.group.forEach((tag) => {
       createPage({
         path: `tags/${kebabCase(tag.fieldValue)}`,
-        component: path.resolve('src/templates/tags.js'),
+        component: path.resolve('src/templates/PostsWithTag.js'),
         context: {
           tag: tag.fieldValue,
         },
