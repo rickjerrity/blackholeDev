@@ -2,25 +2,25 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/layout';
-import TagContainer from '../components/tagContainer';
+import Layout from 'components/Layout';
+import TagContainer from 'components/TagContainer';
 
-const styles = {
-  postSummary: {
-    display: 'inline',
-  },
-};
+import 'styles/index.css';
 
-const IndexPage = ({ data }) => {
+function Home({ data }) {
   return (
     <Layout title="Home">
       <div id="title">
         <h1>Supermassive waste of time</h1>
       </div>
+      <div id="projectsContainer" className="centeredContent">
+        <Link to="/projects">
+          <h2 className="linkTitle">Projects</h2>
+        </Link>
+      </div>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          {node.frontmatter.featuredImage &&
-          node.frontmatter.featuredImage.publicURL ? (
+        <div key={node.id} className="post">
+          {node.frontmatter.featuredImage && node.frontmatter.featuredImage.publicURL ? (
             <div>
               <Link className="plainLink" to={node.fields.slug}>
                 <img src={node.frontmatter.featuredImage.publicURL} />
@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
             </div>
           ) : null}
           <Link to={node.fields.slug}>
-            <h2 style={styles.postSummary}>{node.frontmatter.title}</h2>
+            <h2 className="linkTitle">{node.frontmatter.title}</h2>
           </Link>
           <p>{node.frontmatter.date}</p>
           <p>{node.excerpt}</p>
@@ -37,9 +37,9 @@ const IndexPage = ({ data }) => {
       ))}
     </Layout>
   );
-};
+}
 
-IndexPage.propTypes = {
+Home.propTypes = {
   data: PropTypes.object,
 };
 
@@ -67,4 +67,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage;
+export default Home;
