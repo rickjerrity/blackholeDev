@@ -11,7 +11,7 @@ What the hell am I talking about?
 
 This is a weird website idea I came up with recently, and it was relatively easy to code and implement, so, here we are. I'll keep this blog post brief, because there's not much to it, and I have some other cool (imo) projects I'll be posting about soon, hopefully.
 
-# [giddyup.horse](https://giddyup.horse)
+## [giddyup.horse](https://giddyup.horse)
 
 [giddyup.horse](https://giddyup.horse) is an open source website that is editable by anyone. The website is hosted using [GitHub Pages](https://pages.github.com/), so all the source code is available to look at and modify, but the key difference is that anyone on GitHub can become a contributor to this repo, in seconds, automatically. This means anybody can create branches and create or manage pull requests directly on this repo, which can make changes to the website live. You can even commit directly to the `master` branch, like a true psychopath. If you have time for a commit, you have time to deploy changes to giddyup.horse. More information can be found in the [GitHub repo](https://github.com/git-tee-up/horse) README.
 
