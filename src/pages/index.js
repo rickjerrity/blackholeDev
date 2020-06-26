@@ -15,21 +15,23 @@ function Home({ data }) {
       </div>
       <div id="projectsContainer" className="centeredContent">
         <Link to="/projects">
-          <h2 className="linkTitle">Projects</h2>
+          <h1 className="linkTitle">Projects</h1>
         </Link>
       </div>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id} className="post">
           {node.frontmatter.featuredImage && node.frontmatter.featuredImage.publicURL ? (
-            <div>
+            <div className="centeredContent">
               <Link className="plainLink" to={node.fields.slug}>
                 <img src={node.frontmatter.featuredImage.publicURL} />
               </Link>
             </div>
           ) : null}
-          <Link to={node.fields.slug}>
-            <h2 className="linkTitle">{node.frontmatter.title}</h2>
-          </Link>
+          <div className="centeredContent">
+            <Link to={node.fields.slug}>
+              <h2 className="linkTitle">{node.frontmatter.title}</h2>
+            </Link>
+          </div>
           <p>{node.frontmatter.date}</p>
           <p>{node.excerpt}</p>
           <TagContainer tags={node.frontmatter.tags} />
