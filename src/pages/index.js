@@ -20,10 +20,12 @@ function Home({ data }) {
       </div>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id} className="post">
-          {node.frontmatter.featuredImage && node.frontmatter.featuredImage.publicURL ? (
+          {node.frontmatter.featuredImage || node.frontmatter.featuredImageExternal ? (
             <div>
               <Link className="plainLink" to={node.fields.slug}>
-                <img src={node.frontmatter.featuredImage.publicURL} />
+                <img
+                  src={node.frontmatter.featuredImageExternal ? node.frontmatter.featuredImageExternal : node.frontmatter.featuredImage.publicURL}
+                />
               </Link>
             </div>
           ) : null}
@@ -56,6 +58,7 @@ export const query = graphql`
             featuredImage {
               publicURL
             }
+            featuredImageExternal
           }
           fields {
             slug
