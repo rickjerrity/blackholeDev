@@ -56,7 +56,7 @@ function SaltpackVerify() {
   };
 
   return (
-    <Layout title="Home">
+    <Layout title="Saltpack Verify">
       <div className="centeredContent">
         <h1>Saltpack Verify</h1>
       </div>
@@ -64,20 +64,20 @@ function SaltpackVerify() {
       <p>
         This page can be used to verify <a href="https://saltpack.org/">Saltpack</a> messages online, without having to install the{' '}
         <a href="https://keybase.io/">Keybase</a> client. Saltpack was created by Keybase, and is described as &quot;a modern crypto messaging
-        format&quot;. Essentially this lets people easily sign or encrypt messages and share them in a browser-friendly format.
+        format&quot;. The important part is this lets people easily sign or encrypt messages and share them in a browser-friendly format.
       </p>
 
       <p>
         I was honestly a little surprised that I was unable to find any online message verifiers for Saltpack. If Keybase is going to advocate for a
-        simplistic, modern crypto message format, ease of use and accessibility for newbies should be paramount. Now with this page, users will be
-        able to verify a signed message they were given, without having to create or own a Keybase account themselves.
+        simplistic, modern crypto message format, ease of use and accessibility for newbies should be paramount. With this page, users will be able to
+        verify a signed message they were given, without having to create or own a Keybase account themselves.
       </p>
 
       <p>
         This page calls out to an AWS Lambda endpoint that contains a copy of the Keybase core executable. No authentication is required to verify
         messages using the Keybase client, so I simply verify the message and return the output. Your message is sent straight to the server,
         verified, and the output is shown and then thrown away. Both <a href="https://github.com/rickjerrity/blackholeDev">this website</a> and the{' '}
-        <a href="https://github.com/rickjerrity/saltpackVerifyLambda">Lambda being called</a> are open source, but use your own discretion when
+        <a href="https://github.com/rickjerrity/saltpack-verify-lambda">Lambda being called</a> are open source, but use your own discretion when
         verifying sensitive information.
       </p>
 

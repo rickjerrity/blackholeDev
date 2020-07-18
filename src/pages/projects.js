@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 
 export default function Projects() {
   return (
-    <Layout>
+    <Layout title="Projects">
       <div className="centeredContent">
         <h1 className="linkTitle">Projects</h1>
       </div>
