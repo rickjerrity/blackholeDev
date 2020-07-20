@@ -24,6 +24,27 @@ export default function Projects() {
       <div className="centeredContent">
         <p>A GitHub Pages site editable by anyone at anytime.</p>
       </div>
+      <div className="centeredContent">
+        <a href="https://www.npmjs.com/package/keybase-id">
+          <h2 className="linkTitle">Keybase Id</h2>
+        </a>
+      </div>
+      <div className="centeredContent">
+        <p>
+          An authentication and identification library that uses Keybase Saltpack messages for verification and GitHub, Twitter, and Keybase API for
+          identification.
+        </p>
+      </div>
+      <div className="centeredContent">
+        <a href="/saltpack-verify">
+          <h2 className="linkTitle">Saltpack Verify</h2>
+        </a>
+      </div>
+      <div className="centeredContent">
+        <p>
+          An online <a href="https://saltpack.org/">Saltpack message</a> verifier.
+        </p>
+      </div>
     </Layout>
   );
 }
