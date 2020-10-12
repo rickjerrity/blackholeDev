@@ -13,6 +13,11 @@ function Home({ data }) {
       <div id="title">
         <h1>Supermassive waste of time</h1>
       </div>
+      <div className="centeredContent">
+        <Link to="/whoami">
+          <h1 className="linkTitle">whoami</h1>
+        </Link>
+      </div>
       <div id="projectsContainer" className="centeredContent">
         <Link to="/projects">
           <h1 className="linkTitle">Projects</h1>
