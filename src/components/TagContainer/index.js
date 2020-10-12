@@ -11,7 +11,7 @@ function TagContainer({ tags }) {
     <div className="tagContainer">
       {tags && tags.length
         ? tags.map((tag) => (
-            <Link key={tag} to={`tags/${kebabCase(tag)}`}>
+            <Link key={tag} to={`/tags/${kebabCase(tag)}`}>
               <span className="tag">{tag}</span>
             </Link>
           ))

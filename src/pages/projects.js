@@ -45,17 +45,6 @@ export default function Projects() {
           An online <a href="https://saltpack.org/">Saltpack message</a> verifier.
         </p>
       </div>
-      <div className="centeredContent">
-        <a href="https://adchamp.live">
-          <h2 className="linkTitle">AdChamp</h2>
-        </a>
-      </div>
-      <div className="centeredContent">
-        <p>
-          The easiest way for Twitch streamers to make money and for advertisers to connect with a live audience. Just add a browser source to your
-          streaming software and start making extra cash.
-        </p>
-      </div>
     </Layout>
   );
 }
