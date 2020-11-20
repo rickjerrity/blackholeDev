@@ -31,7 +31,7 @@ function Home({ data }) {
           {node.frontmatter.featuredImage && node.frontmatter.featuredImage.publicURL ? (
             <div className="centeredContent">
               <Link className="plainLink" to={node.fields.slug}>
-                <img src={node.frontmatter.featuredImage.publicURL} style={{ width: '100%' }} />
+                <img src={node.frontmatter.featuredImage.publicURL} style={{ maxWidth: '500px' }} />
               </Link>
             </div>
           ) : null}
