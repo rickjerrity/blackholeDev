@@ -14,7 +14,7 @@ export default function Projects() {
         </a>
       </div>
       <div className="centeredContent">
-        <p>A multi-platform stream viewing service for Twitch, Mixer, and YouTube live streamers.</p>
+        <p>A multi-platform stream viewing service for Twitch and YouTube live streamers.</p>
       </div>
       <div className="centeredContent">
         <a href="https://giddyup.horse">
