@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
 import Layout from 'components/Layout';
@@ -31,7 +32,11 @@ function Home({ data }) {
           {node.frontmatter.featuredImage && node.frontmatter.featuredImage.publicURL ? (
             <div className="centeredContent">
               <Link className="plainLink" to={node.fields.slug}>
-                <img src={node.frontmatter.featuredImage.publicURL} style={{ maxWidth: '500px' }} />
+                {node.frontmatter.featuredImage.childImageSharp ? (
+                  <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} style={{ width: '500px' }} />
+                ) : (
+                  <img src={node.frontmatter.featuredImage.publicURL} />
+                )}
               </Link>
             </div>
           ) : null}
@@ -65,6 +70,11 @@ export const query = graphql`
             tags
             featuredImage {
               publicURL
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
           fields {
