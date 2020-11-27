@@ -56,7 +56,7 @@ function SaltpackVerify() {
   };
 
   return (
-    <Layout title="Saltpack Verify">
+    <Layout title="Saltpack Verify" contentClass="shrunkContent">
       <div className="centeredContent">
         <h1>Saltpack Verify</h1>
       </div>

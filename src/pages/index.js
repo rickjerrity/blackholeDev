@@ -33,9 +33,9 @@ function Home({ data }) {
             <div className="centeredContent">
               <Link className="plainLink" to={node.fields.slug}>
                 {node.frontmatter.featuredImage.childImageSharp ? (
-                  <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} style={{ width: '500px' }} />
+                  <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} className="postImageContainer" />
                 ) : (
-                  <img src={node.frontmatter.featuredImage.publicURL} />
+                  <img src={node.frontmatter.featuredImage.publicURL} className="postImage" />
                 )}
               </Link>
             </div>

@@ -10,3 +10,21 @@
 .post {
   margin-bottom: 60px;
 }
+
+.postImageContainer {
+  width: 500px;
+}
+
+.postImage {
+  max-width: 500px;
+}
+
+@media only screen and (max-width: 500px) {
+  .postImageContainer {
+    width: 95vw;
+  }
+
+  .postImage {
+    max-width: 95vw;
+  }
+}
