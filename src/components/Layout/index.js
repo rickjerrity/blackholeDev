@@ -9,7 +9,7 @@ import SEO from 'components/SEO';
 
 import './style.css';
 
-function Layout({ children, title }) {
+function Layout({ children, title, contentClass = '' }) {
   const theme = useContext(ThemeContext);
 
   const data = useStaticQuery(
@@ -29,7 +29,7 @@ function Layout({ children, title }) {
       <SEO title={title} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={`flexContainer${theme.lightMode ? ' lightTheme' : ''}`}>
-        <main className="content">{children}</main>
+        <main className={`content ${contentClass}`}>{children}</main>
       </div>
       <Footer />
     </div>
@@ -39,6 +39,7 @@ function Layout({ children, title }) {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
+  contentClass: PropTypes.string,
 };
 
 export default Layout;

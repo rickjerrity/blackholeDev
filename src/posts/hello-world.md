@@ -5,7 +5,9 @@ tags: [ 'blackhole.dev', 'Gatsby', 'StreamE', 'Twitch', 'Mixer', 'YouTube', 'Air
 featuredImage: '../images/hello-world.gif'
 ---
 
-<img src="../images/hello-world.gif">
+<div class="centeredContent">
+  <img src="../images/hello-world.gif" class="postImage">
+</div>
 
 The world never says hello back... but I will. Hi :)
 
