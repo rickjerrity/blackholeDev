@@ -61,6 +61,7 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet"></link>
+      <script data-goatcounter="https://1337.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     </Helmet>
   );
 }
