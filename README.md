@@ -2,6 +2,8 @@
 
 This is the [Gatsby](https://www.gatsbyjs.org/) repo for the [blackhole.dev](https://blackhole.dev) blog.
 
+**I know, I need to move the images out of the repo! Haven't gotten around to finding a CDN I'd like to use!*
+
 ## Requirements
 
 * [NodeJS](https://nodejs.org/) installed (this includes npm)
