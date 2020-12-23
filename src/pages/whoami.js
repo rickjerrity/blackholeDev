@@ -12,7 +12,7 @@ export default function About() {
         <p>
           My name is Nick and I code the things. I&apos;m a full-time .NET software developer and I work on weird projects in my spare time that I
           write posts about here. I really like JavaScript, React, Python, and C#, and I focus on web/mobile development. Right now I&apos;m loving
-          NextJS and Vercel a lot and have been using that for new personal projects. I&apos;m a full-stack engineer familiar with working on small
+          NextJS and Vercel a lot and have been using those for new personal projects. I&apos;m a full-stack engineer familiar with working on small
           teams and bringing features from concept to production. Check out my <a href="https://github.com/rickjerrity">GitHub</a> for some code
           examples.
         </p>
