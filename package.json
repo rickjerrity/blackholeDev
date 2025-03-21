@@ -5,7 +5,8 @@
   "version": "1.0.0",
   "author": "rickjerrity",
   "scripts": {
-    "build": "gatsby clean && cross-env NODE_OPTIONS='--openssl-legacy-provider' gatsby build",
+    "build": "gatsby clean && gatsby build",
+    "build:dev": "gatsby clean && cross-env NODE_OPTIONS='--openssl-legacy-provider' gatsby build",
     "dev": "npm run develop",
     "develop": "gatsby clean && cross-env NODE_OPTIONS='--openssl-legacy-provider' gatsby develop",
     "lint": "eslint --ignore-path .gitignore .",
