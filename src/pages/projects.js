@@ -9,20 +9,12 @@ export default function Projects() {
         <h1 className="linkTitle">Projects</h1>
       </div>
       <div className="centeredContent">
-        <a href="https://streame.tv">
-          <h2 className="linkTitle">StreamE.tv</h2>
+        <a href="https://chatroyale.io">
+          <h2 className="linkTitle">Chat Royale</h2>
         </a>
       </div>
       <div className="centeredContent">
-        <p>A multi-platform stream viewing service for Twitch and YouTube live streamers.</p>
-      </div>
-      <div className="centeredContent">
-        <a href="https://giddyup.horse">
-          <h2 className="linkTitle">giddyup.horse</h2>
-        </a>
-      </div>
-      <div className="centeredContent">
-        <p>A GitHub Pages site editable by anyone at anytime.</p>
+        <p>A chat based battle royale game written in Typescript using React/Tailwind/Socket.IO.</p>
       </div>
       <div className="centeredContent">
         <a href="https://www.npmjs.com/package/keybase-id">
